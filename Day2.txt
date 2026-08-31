@@ -1,0 +1,6 @@
+1. Krijimi i nje komponenti
+2. Perdorimi i variablave, array dhe objekteve
+3. Instalimi i Prettier-Code formatter,
+   kopjohet nje pjese e kodit te ketij extention dhe    vendoset ne filen settings.json, behet tik ose    enable pjesa: Format on save
+4. What is JSX (menyra se si shenohet)
+5. Perdorimi i variablave

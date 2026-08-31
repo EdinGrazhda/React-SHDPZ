@@ -1,0 +1,23 @@
+{
+    "blogs": [
+        { 
+            "title": "Shkolla Digjitale Prizren", 
+            "body": "Kurs i programimit", 
+            "instructor": "Arianit Tershnjaku",
+             "id": 1
+        },
+        { 
+            "title": "Shkolla Digjitale Prizren", 
+            "body": "Kurs i programimit", 
+            "instructor": "Fatjona Hoxhaj",
+             "id": 2
+        },
+        { 
+            "title": "Shkolla Digjitale Prizren", 
+            "body": "Kurs i programimit", 
+            "instructor": "Kebir Cesko",
+             "id": 3
+        }
+        
+    ]
+}    

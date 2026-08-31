@@ -1,0 +1,5 @@
+1. Riperdorimi i komponenteve
+2. Qka jane props ne Recat
+3. Destructuring Props
+4. Immutability of Props
+5. Krijimi i Array
