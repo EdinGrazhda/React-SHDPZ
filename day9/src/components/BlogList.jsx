@@ -19,7 +19,9 @@ const BlogList = (props) => {
 
           {/* Buttoni qe e kemi krjuar ne BlogList, i cili e perdor funksionin qe e keimi krijuar ne komponentin home. */}
           {/* Ky buton na mundeson te fshijme nje elemente brenda array duke e perdorur id e atije elementi */}
-          <button onClick={() => deleteButton(blog.id)}>Delete blog</button>
+          {deleteButton && (
+            <button onClick={() => deleteButton(blog.id)}>Delete blog</button>
+          )}
         </div>
       ))}
     </div>

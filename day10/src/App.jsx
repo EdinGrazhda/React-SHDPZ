@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Project from "./components/Project";
-import BlogList from "./components/BlogList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BlogDetails from "./components/BlogDetails";
 

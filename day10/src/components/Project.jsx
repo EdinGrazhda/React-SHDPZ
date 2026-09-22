@@ -1,21 +1,41 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Project = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [instructor, setInstructor] = useState("Arianit");
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const submit = (e) => {
     e.preventDefault();
     const blog = { title, body, instructor };
 
+    setIsPending(true);
+    setError(null);
+
     fetch("http://localhost:4000/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
-    }).then(() => {
-      console.log("new blog added");
-    });
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Could not add the blog");
+        }
+
+        return res.json();
+      })
+      .then(() => {
+        setIsPending(false);
+        navigate("/");
+      })
+      .catch((err) => {
+        setIsPending(false);
+        setError(err.message);
+      });
   };
 
   return (
@@ -44,7 +64,9 @@ const Project = () => {
           <option value="Fatjona">Fatjona</option>
           <option value="Kebir">Kebir</option>
         </select>
-        <button>Add Blog</button>
+        {!isPending && <button>Add Blog</button>}
+        {isPending && <button disabled>Adding Blog...</button>}
+        {error && <p>{error}</p>}
       </form>
     </div>
   );

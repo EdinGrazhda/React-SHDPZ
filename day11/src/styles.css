@@ -18,7 +18,8 @@ body {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  max-width: 100vw;
+  height: min(70vh, 600px);
 }
 
 .swiper-slide {
@@ -29,4 +30,6 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
